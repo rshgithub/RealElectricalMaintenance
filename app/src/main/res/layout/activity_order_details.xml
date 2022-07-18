@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MaintenanceActivities.OrderDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteBackground"
+        android:orientation="vertical">
+
+
+
+    <include
+        android:id="@+id/orderDetails_appBar"
+        layout="@layout/orders_details_toolbar" />
+
+    <include
+        android:id="@+id/orderDetails_userInfoCard"
+        layout="@layout/user_info_card" />
+
+
+
+    <LinearLayout
+        android:id="@+id/orderDetails_taskLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/orderDetails_addTaskBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@color/Transparent"
+            android:drawableRight="@drawable/ic_add"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTint="@color/green"
+            android:text="اضافة مهمة"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8ssp"
+            android:layout_marginRight="@dimen/_200sdp"
+            android:textStyle="normal"
+            tools:ignore="RtlCompat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderDetails_taskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:text="مهام العمل "
+            android:textColor="@color/GreyText"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/_8sdp"
+            android:textStyle="normal" />
+
+        </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderDetails_tasksRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/textfield_background"/>
+
+
+    <LinearLayout
+        android:id="@+id/orderDetails_rocessLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/orderDetails_addProcessBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@color/Transparent"
+            android:drawableRight="@drawable/ic_add"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTint="@color/green"
+            android:text="@string/details_add_process"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_210sdp"
+            android:textStyle="normal"
+            tools:ignore="RtlCompat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderDetails_processTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:text="@string/process"
+            android:textColor="@color/GreyText"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/_8sdp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderDetails_processRecycler"
+        android:layout_width="match_parent"
+        android:layoutDirection="rtl"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/textfield_background"/>
+
+
+    <LinearLayout
+        android:id="@+id/orderDetails_usedMaterialsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        tools:ignore="RtlHardcoded">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/orderDetails_addMaterialsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@color/Transparent"
+            android:drawableRight="@drawable/ic_add"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTint="@color/green"
+            android:text="@string/details_add_materials"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_210sdp"
+            android:textStyle="normal"
+            tools:ignore="RtlCompat"
+            android:drawableEnd="@drawable/ic_add" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderDetails_usedMaterialsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:text="@string/materials"
+            android:textColor="@color/GreyText"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/_8sdp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderDetails_materialsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/textfield_background"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutDialogContainer"
+    android:background="@color/BlueTransparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_170sdp"
+        android:background="@drawable/dialog_box_backround"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/process_closeBtn"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_close_24"
+            tools:ignore="VectorDrawableCompat"
+            android:layout_marginStart="@dimen/_5sdp" />
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/orderFilterFirstRowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="right"
+                    android:orientation="vertical"
+                    tools:ignore="RtlHardcoded">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/process_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/details_add_process"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_20ssp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:gravity="start"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/_5sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/process_processTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/process_title"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:textColor="@color/GreyText"
+                        android:gravity="start"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:layout_marginLeft="@dimen/_2sdp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/processET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textfield_background"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:hint="@string/write_process"
+                        android:inputType="text"
+                        android:padding="@dimen/_10sdp"
+                        android:textDirection="rtl"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:paddingStart="@dimen/_20sdp"
+                        tools:ignore="RtlSymmetry" />
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="اكتب الآلية "-->
+<!--                        android:inputType="text"-->
+<!--                        android:textDirection="rtl"-->
+<!--                        android:textSize="@dimen/_10ssp"-->
+<!--                        app:hintTextColor="@color/LightBlue"-->
+<!--                        android:textColorHint="@color/BlackText"-->
+<!--                        app:boxStrokeColor="@color/LightBlue" >-->
+
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:id="@+id/processET"-->
+<!--                            android:padding="@dimen/_10sdp"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/textfield_background" />-->
+
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/process_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:weightSum="2">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/process_resetBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_button"
+                    android:text="@string/reset"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/GreyText"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_2sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/process_saveBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/light_blue_button"
+                    android:text="@string/save"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

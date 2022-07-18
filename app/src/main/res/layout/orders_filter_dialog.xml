@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutDialogContainer"
+    android:background="@color/BlueTransparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_370sdp"
+        android:background="@drawable/dialog_box_backround"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415">
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ordersFilter_closeBtn"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.034"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022"
+            app:srcCompat="@drawable/ic_baseline_close_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:gravity="right"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:text="@string/orders_filter_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/ordersFilter_divider"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@color/LightBlue" />
+
+            <TextView
+                android:id="@+id/ordersFilter_subTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:text="@string/orders_filter_desc"
+                android:textColor="@color/DarkGrey"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal" />
+
+
+            <LinearLayout
+                android:id="@+id/ordersFilter_firstRowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="right"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:id="@+id/ordersFilter_signaNumLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ordersFilter_signaNumlTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/signal_num"
+                        android:textColor="@color/GreyText"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ordersFilter_signalNumET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:background="@drawable/textfield_background"
+                        android:hint="@string/write_signal_num"
+                        android:inputType="number"
+                        android:textDirection="rtl"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/BlackText"
+                        android:textColorHint="@color/BlackText"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ordersFilter_SER_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ordersFilter_SER_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/ser_num"
+                        android:textColor="@color/GreyText"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ordersFilter_SER_ET"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:background="@drawable/textfield_background"
+                        android:hint="@string/write_ser_num"
+                        android:inputType="number"
+                        android:padding="@dimen/_5sdp"
+                        android:textDirection="rtl"
+                        android:textColor="@color/BlackText"
+                        android:textColorHint="@color/BlackText"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ordersFilter_secoundRowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="right"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/ordersFilter_peopleLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ordersFilter_peopleTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/people_name"
+                        android:textColor="@color/GreyText"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ordersFilter_peopleET"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:background="@drawable/textfield_background"
+                        android:hint="@string/write_people_name"
+                        android:inputType="text"
+                        android:padding="@dimen/_5sdp"
+                        android:textDirection="rtl"
+                        android:textColor="@color/BlackText"
+                        android:textColorHint="@color/BlackText"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ordersFilter_subscriptionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ordersFilter_subscriptionTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/sub_num"
+                        android:textColor="@color/GreyText"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ordersFilter_subscriptionET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:background="@drawable/textfield_background"
+                        android:hint="@string/write_sub_num"
+                        android:inputType="number"
+                        android:padding="@dimen/_5sdp"
+                        android:textDirection="rtl"
+                        android:textColor="@color/BlackText"
+                        android:textColorHint="@color/BlackText"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/orderFilter_thirdRowLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ordersFilter_stateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     android:gravity="right"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ordersFilter_stateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/state"
+                        android:textColor="@color/GreyText"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:id="@+id/ordersFilter_stateSpinnerLayout"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:gravity="right"
+                        android:background="@drawable/textfield_background"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ordersFilter_stateSpinnerIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_drop_down_arrow" />
+
+                        <Spinner
+                            android:id="@+id/ordersFilter_stateSpinner"
+                            android:layout_width="@dimen/_95sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:backgroundTint="@color/white"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            android:textDirection="rtl"
+                            android:textColor="@color/BlackText"
+                            android:textColorHint="@color/BlackText" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ordersFilter_residenceLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ordersFilter_residenceTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/location"
+                        android:textColor="@color/GreyText"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ordersFilter_locationSpinnerLayout"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:gravity="right"
+                        android:background="@drawable/textfield_background"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ordersFilter_locationSpinnerIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_drop_down_arrow" />
+
+                        <Spinner
+                            android:id="@+id/ordersFilter_locationSpinner"
+                            android:layout_width="@dimen/_95sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:backgroundTint="@color/white"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            android:textDirection="rtl"
+                            android:textColor="@color/BlackText"
+                            android:textColorHint="@color/BlackText" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/orderFilter_fourthRowLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ordersFilter_transferorLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     android:gravity="right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/ordersFilter_transferorTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/transfarer"
+                        android:textColor="@color/GreyText"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:id="@+id/ordersFilter_transferorSpinnerLayout"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:gravity="right"
+                        android:background="@drawable/textfield_background"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ordersFilter_transferorSpinnerIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_drop_down_arrow" />
+
+
+                        <Spinner
+                            android:id="@+id/ordersFilter_transferorSpinner"
+                            android:layout_width="@dimen/_95sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:backgroundTint="@color/white"
+                            android:textDirection="rtl"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            android:textColor="@color/BlackText"
+                            android:textColorHint="@color/BlackText"  />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ordersFilter_areaLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ordersFilter_areaTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/area"
+                        android:textColor="@color/GreyText"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:id="@+id/ordersFilter_areaSpinnerLayout"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:gravity="right"
+                        android:background="@drawable/textfield_background"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ordersFilter_areaSpinnerIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_drop_down_arrow" />
+
+                        <Spinner
+                            android:id="@+id/ordersFilter_areaSpinner"
+                            android:layout_width="@dimen/_95sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:backgroundTint="@color/white"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            android:textDirection="rtl"
+                            android:textColor="@color/BlackText"
+                            android:textColorHint="@color/BlackText"  />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/orderFilter_fifthRowLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="right"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/ordersFilter_signalTypeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ordersFilter_signalTypeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/signal_type"
+                        android:textColor="@color/GreyText"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:id="@+id/ordersFilter_signalTypeSpinnerLayout"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:gravity="right"
+                        android:background="@drawable/textfield_background"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ordersFilter_signalTypeSpinnerIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_drop_down_arrow" />
+
+
+                        <Spinner
+                            android:id="@+id/ordersFilter_signalTypeSpinner"
+                            android:layout_width="@dimen/_95sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:backgroundTint="@color/white"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dropdown"
+                            android:textDirection="rtl"
+                            android:textColor="@color/BlackText"
+                            android:textColorHint="@color/BlackText" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:weightSum="2">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ordersFilter_resetBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_button"
+                    android:text="@string/reset"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/GreyText"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ordersFilter_searchBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/light_blue_button"
+                    android:text="@string/search"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

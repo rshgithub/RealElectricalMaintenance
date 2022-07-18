@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutDialogContainer"
+    android:background="@color/BlueTransparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_300sdp"
+        android:background="@drawable/dialog_box_backround"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415">
+
+        <ImageButton
+            android:id="@+id/addMaterial_closeBtn"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_close_24"
+            tools:ignore="VectorDrawableCompat"
+            android:layout_marginStart="@dimen/_5sdp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_15sdp"
+            android:gravity="right"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="16sd"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/addMaterial_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="@string/details_add_materials"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/addMaterial_processTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/process_title"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/DarkGrey"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addMaterial_processET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textfield_background"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableTint="@color/white"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:hint="@string/write_process"
+                android:inputType="text"
+                android:padding="@dimen/_10sdp"
+                android:textDirection="rtl"
+                android:paddingLeft="@dimen/_20sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:paddingStart="@dimen/_20sdp"
+                tools:ignore="RtlSymmetry" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <LinearLayout
+                    android:id="@+id/addMaterial_firstRowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    tools:ignore="RtlHardcoded">
+
+
+                    <LinearLayout
+                        android:id="@+id/addMaterial_materialNumLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/addMaterial_materialNumTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/material_num"
+                            android:textColor="@color/GreyText"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addMaterial_materialNumET"
+                            android:layout_width="@dimen/_110sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:background="@drawable/textfield_background"
+                            android:hint="@string/write_material_num"
+                            android:textDirection="rtl"
+                            android:inputType="number"
+                            android:textSize="@dimen/_10ssp"
+                            android:padding="@dimen/_5sdp"
+                            android:textColor="@color/BlackText"
+                            android:textColorHint="@color/BlackText" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/addMaterial_materialNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:gravity="right"
+                        android:layout_marginLeft="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/addMaterial_materialNameTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:text="@string/material_name"
+                            android:textColor="@color/GreyText"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addMaterial_materialNameET"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp"
+                            android:textColor="@color/BlackText"
+                            android:inputType="text"
+                            android:textDirection="rtl"
+                            android:textSize="@dimen/_10ssp"
+                            android:padding="@dimen/_5sdp"
+                            android:background="@drawable/textfield_background"
+                            android:hint="@string/write_material_name"
+                            android:textColorHint="@color/BlackText"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/addMaterial_secoundRowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    tools:ignore="RtlHardcoded">
+
+
+                    <LinearLayout
+                        android:id="@+id/addMaterial_unitLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/addMaterial_unitTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/unit"
+                            android:textColor="@color/GreyText"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addMaterial_unitET"
+                            android:layout_width="@dimen/_110sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:background="@drawable/textfield_background"
+                            android:hint="@string/write_unit"
+                            android:inputType="text"
+                            android:textDirection="rtl"
+                            android:textSize="@dimen/_10ssp"
+                            android:padding="@dimen/_5sdp"
+                            android:textColor="@color/BlackText"
+                            android:textColorHint="@color/BlackText" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/addMaterial_recievedQuantityLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:gravity="right"
+                        android:layout_marginLeft="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/addMaterial_recievedQuantityTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:text="@string/used_quantity"
+                            android:textColor="@color/GreyText"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addMaterial_recievedQuantityET"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp"
+                            android:textColor="@color/BlackText"
+                            android:inputType="text"
+                            android:textDirection="rtl"
+                            android:textSize="@dimen/_10ssp"
+                            android:padding="@dimen/_5sdp"
+                            android:background="@drawable/textfield_background"
+                            android:hint="@string/write_used_quantity"
+                            android:textColorHint="@color/BlackText"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/addMaterialThirdRowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/addMaterial_returnedQuantityLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/addMaterial_returnedQuantityTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/returned_quantity"
+                            android:textColor="@color/GreyText"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addMaterial_returnedQuantityET"
+                            android:layout_width="@dimen/_110sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:background="@drawable/textfield_background"
+                            android:hint="@string/write_returned_quantity"
+                            android:inputType="text"
+                            android:textDirection="rtl"
+                            android:textSize="@dimen/_10ssp"
+                            android:padding="@dimen/_5sdp"
+                            android:textColor="@color/BlackText"
+                            android:textColorHint="@color/BlackText" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/addMaterial_usedQuantityLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:gravity="right"
+                        android:layout_marginLeft="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/addMaterial_usedQuantityTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:text="@string/used_quantity"
+                            android:textColor="@color/GreyText"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addMaterial_usedQuantityET"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp"
+                            android:textColor="@color/BlackText"
+                            android:inputType="text"
+                            android:textDirection="rtl"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_10ssp"
+                            android:background="@drawable/textfield_background"
+                            android:text="@string/write_used_quantity"
+                            android:textColorHint="@color/BlackText"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/addMaterial_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:weightSum="2">
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/addMaterial_clearBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_button"
+                        android:text="@string/reset"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/GreyText"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/addMaterial_saveBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/light_blue_button"
+                        android:text="@string/save"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar_shadow"
+        android:padding="@dimen/_5sdp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/searchBar_searchButton"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:textStyle="normal"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/dark_blue_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textSize="@dimen/_10ssp"
+            android:text="@string/search"
+            android:layout_marginEnd="@dimen/_5sdp" />
+
+
+        <LinearLayout
+            android:id="@+id/searchBar_subscriptionNumLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/_5sdp"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/searchBar_subscriptionNumTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:text="@string/sub_num"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchBar_subscriptionNumET"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/textfield_background"
+                android:hint="@string/write_sub_num"
+                android:inputType="number"
+                android:textDirection="rtl"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/BlackText"
+                android:textColorHint="@color/BlackText"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/searchBar_peopleNameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/searchBar_peopleNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:text="@string/people_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchBar_peopleNameET"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/textfield_background"
+                android:hint="@string/write_people_name"
+                android:inputType="text"
+                android:padding="@dimen/_5sdp"
+                android:textDirection="rtl"
+                android:textColor="@color/BlackText"
+                android:textColorHint="@color/BlackText"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
+    </LinearLayout>

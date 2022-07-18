@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/orderDetailsMaterialCard"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:background="@drawable/textfield_background"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:weightSum="6"
+        android:orientation="horizontal"
+        tools:ignore="RtlHardcoded">
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp">
+
+            <TextView
+                android:id="@+id/materialCard_recievedQuantity"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/quantity"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/materialCard_recievedQuantityTV"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/num5"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="@color/BlackText" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@color/LightGrey" />
+
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/materialCard_cost"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/cost"
+                android:gravity="center"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/materialCard_costTV"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/cost_ex"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="@color/BlackText" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@color/LightGrey" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp">
+
+            <TextView
+                android:id="@+id/materialCard_unitNum"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/unit"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/materialCard_unitNumTV"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/num5"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="@color/BlackText" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        <View
+            
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@color/LightGrey" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp">
+
+            <TextView
+                android:id="@+id/materialCard_materialName"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/category_name"
+                android:gravity="center"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/materialCard_materialNameTV"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/electrical_counter"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="@color/BlackText" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@color/LightGrey" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp">
+
+            <TextView
+                android:id="@+id/materialCard_materialNum"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/category_num"
+                android:gravity="center"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/materialCard_materialNumTV"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/num2"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:gravity="center"
+                android:textColor="@color/BlackText" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@color/LightGrey" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp">
+
+            <TextView
+                android:id="@+id/materialCard_serNum"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/ser_num"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/materialCard_serNumTV"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/num2"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="@color/BlackText" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <View
+        android:id="@+id/ordersFilter_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_margin="@dimen/_3sdp"
+        android:background="@color/LightGrey" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        tools:ignore="RtlHardcoded">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/materialCard_entryDate"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/entry_date_title"
+                android:gravity="center"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/materialCard_entryDateTV"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/entry_date"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="@color/BlackText" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View 
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@color/LightGrey" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/materialCard_entryUserName"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/entry_name"
+                android:gravity="center"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/materialCard_entryUserNameTV"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/entry_name_ex"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="@color/BlackText" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@color/LightGrey" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/materialCard_materialStatus"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/category_status"
+                android:gravity="center"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/materialCard_materialStatusTV"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/status_new"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="@color/BlackText" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@color/LightGrey" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/materialCard_usedQuantity"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/used"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/materialCard_usedQuantityTV"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/num5"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="@color/BlackText" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@color/LightGrey" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/materialCard_returnedQuantity"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/returned"
+                android:gravity="center"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/materialCard_returnedQuantityTV"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/num5"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="@color/BlackText" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>
+
+

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutDialogContainer"
+    android:background="@color/BlueTransparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_310sdp"
+        android:background="@drawable/dialog_box_backround"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415">
+
+        <ImageButton
+            android:id="@+id/addTask_closeBtn"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_close_24"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_15sdp"
+            android:orientation="vertical"
+            android:gravity="right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="16sd">
+
+            <TextView
+                android:id="@+id/addTask_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="@string/add_task_title"
+                android:textColor="@color/BlackText"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/addTask_taskNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/task_req"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/GreyText"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addTask_taskNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/textfield_background"
+                android:drawableTint="@color/white"
+                android:hint="@string/write_task"
+                android:inputType="text"
+                android:padding="@dimen/_10sdp"
+                android:textDirection="rtl"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/BlackText"
+                android:textColorHint="@color/BlackText" />
+
+            <TextView
+                android:id="@+id/addTask_taskDescriptionTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/task_desc_req"
+                android:textColor="@color/GreyText"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addTask_taskDescriptionET"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/textfield_background"
+                android:drawablePadding="@dimen/_10sdp"
+                android:inputType="text"
+                android:gravity="right"
+                android:textDirection="rtl"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:hint="@string/write_task_desc"
+                android:paddingTop="@dimen/_5sdp"
+                android:textSize="@dimen/_10sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:textColor="@color/BlackText"
+                android:textColorHint="@color/BlackText"
+                android:paddingLeft="@dimen/_5sdp"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <LinearLayout
+                android:id="@+id/addTask_dateAndTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    tools:ignore="RtlHardcoded">
+
+
+                    <LinearLayout
+                        android:id="@+id/addTask_executionDateLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/addTask_executionDateTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/execution_date_req"
+                            android:textColor="@color/GreyText"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:textSize="@dimen/_8ssp"
+                            android:textStyle="normal" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/addTask_executionDateET"
+                            android:layout_width="@dimen/_110sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:drawableRight="@drawable/ic_calender"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:hint="@string/entry_date"
+                            android:textDirection="rtl"
+                            android:inputType="date"
+                            android:background="@drawable/textfield_background"
+                            android:textColor="@color/BlackText"
+                            android:textColorHint="@color/BlackText"
+                            android:textSize="@dimen/_10sdp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/addTask_startEndTimeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/addTask_endTimeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        tools:ignore="RtlHardcoded">
+
+                        <TextView
+                            android:id="@+id/addTask_endTimeTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:text="@string/end_date_req"
+                            android:textColor="@color/GreyText"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addTask_endTimeET"
+                            android:layout_width="@dimen/_110sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:background="@drawable/textfield_background"
+                            android:hint="@string/time_ex"
+                            android:textDirection="rtl"
+                            android:inputType="time"
+                            android:textSize="@dimen/_10sdp"
+                            android:drawableRight="@drawable/ic_clock"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:textColor="@color/BlackText"
+                            android:textColorHint="@color/BlackText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/addTask_startTimeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="right"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        tools:ignore="RtlHardcoded">
+
+                        <TextView
+                            android:id="@+id/addTask_startTimeTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/start_date_req"
+                            android:textColor="@color/GreyText"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addTask_startTimeET"
+                            android:layout_width="@dimen/_110sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:background="@drawable/textfield_background"
+                            android:hint="@string/time_ex"
+                            android:textDirection="rtl"
+                            android:inputType="time"
+                            android:textSize="@dimen/_10sdp"
+                            android:drawableRight="@drawable/ic_clock"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:textColor="@color/BlackText"
+                            android:textColorHint="@color/BlackText" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addTask_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:weightSum="2"
+                tools:ignore="RtlHardcoded">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addTask_resetBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_button"
+                    android:text="@string/reset"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/GreyText"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addTask_saveBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:background="@drawable/light_blue_button"
+                    android:text="@string/save"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

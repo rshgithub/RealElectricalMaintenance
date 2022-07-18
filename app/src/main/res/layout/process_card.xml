@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_90sdp"
+    android:layout_height="@dimen/_50sdp"
+    android:id="@+id/processCardCard"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_marginEnd="@dimen/_5sdp">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/textfield_background"
+        android:orientation="vertical"
+        android:gravity="right"
+        android:layout_gravity="right"
+        android:padding="@dimen/_5sdp"
+        tools:ignore="RtlHardcoded">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/processCard_id"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/num5"
+                android:background="@drawable/light_blue_button"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/processCard_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:text="@string/check_loads"
+                android:textColor="@color/BlackText" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:background="@color/LightGrey" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/processCard_entryUserNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:weightSum="2"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/processCard_entryUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:text="@string/entry_name"
+                android:textColor="@color/GreyText" />
+
+            <TextView
+                android:id="@+id/processCard_entryUserNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/name_ex1"
+                android:textColor="@color/BlackText" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/processCard_entryDateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/processCard_entryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/entry_date_title"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:textColor="@color/GreyText"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/processCard_entryDateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/entry_date"
+                android:textColor="@color/BlackText"
+                tools:ignore="RtlHardcoded" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp"
+    android:background="@drawable/shadow"
+    android:id="@+id/toolbar"  >
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/toolbar_addButton"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:textStyle="normal"
+        android:background="@drawable/green_button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        android:text="@string/addOrder"
+        android:textAlignment="textStart"
+        android:paddingRight="@dimen/_10sdp"
+        android:layout_gravity="left"
+        android:drawablePadding="@dimen/_5sdp"
+        android:drawableRight="@drawable/ic_add"
+        tools:ignore="RtlCompat,RtlHardcoded,RtlSymmetry"
+        android:paddingEnd="@dimen/_10sdp"
+        android:drawableEnd="@drawable/ic_add" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/toolbar_filterButton"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:textStyle="normal"
+        android:background="@drawable/dark_blue_button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:text="@string/filter_txt"
+        android:textAlignment="textStart"
+        android:paddingRight="@dimen/_10sdp"
+        android:layout_gravity="left"
+        android:drawablePadding="@dimen/_5sdp"
+        android:drawableRight="@drawable/ic_filter"
+        tools:ignore="RtlCompat,RtlHardcoded,RtlSymmetry"
+        android:drawableEnd="@drawable/ic_filter"
+        android:paddingEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:gravity="right"
+                    android:layout_marginEnd="@dimen/_5sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="normal"
+                        android:text="@string/mtnc_toolbar_txt"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/toolbar_subTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:text="@string/orders_toolbar_txt"/>
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/toolbar_logo"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:src="@drawable/logo"
+                    android:layout_marginRight="@dimen/_8sdp" />
+
+            </LinearLayout>
+
+
+</androidx.appcompat.widget.Toolbar>
