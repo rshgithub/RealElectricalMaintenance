@@ -1,15 +1,12 @@
-
 # Electric Maintenance App
 
 ## About the App
 
-> The Electric Maintenance App is designed for electrical maintenance workers to track citizens' complaints and process improvement anywhere using tablets. It allows workers to efficiently manage complaints, monitor their progress, and implement necessary improvements to streamline the maintenance process.
+The Electric Maintenance App is designed for electrical maintenance workers to track citizens' complaints and process improvement anywhere using tablets. It allows workers to efficiently manage complaints, monitor their progress, and implement necessary improvements to streamline the maintenance process.
 
-![11](https://github.com/rshgithub/FlutterElectronicsShop/assets/29553481/656b6911-dd06-45eb-aad0-bd6cc62cbba4)
-![12](https://github.com/rshgithub/FlutterElectronicsShop/assets/29553481/77e0073b-1d5a-48b1-8dcd-a773b2e783ea)
-![13](https://github.com/rshgithub/FlutterElectronicsShop/assets/29553481/c1b21565-29eb-422d-aba2-d4c745c1a2b8)
-
-
+![Screenshot 1](https://github.com/rshgithub/FlutterElectronicsShop/assets/29553481/656b6911-dd06-45eb-aad0-bd6cc62cbba4)
+![Screenshot 2](https://github.com/rshgithub/FlutterElectronicsShop/assets/29553481/77e0073b-1d5a-48b1-8dcd-a773b2e783ea)
+![Screenshot 3](https://github.com/rshgithub/FlutterElectronicsShop/assets/29553481/c1b21565-29eb-422d-aba2-d4c745c1a2b8)
 
 ## Features
 
@@ -21,15 +18,14 @@
 
 - **Efficient Management:** Efficiently manage complaints, monitor their progress, and ensure timely resolution.
 
-## Technologies Used
+## Used Technologies
 
-- **Development Environment:** Android Studio
-- **Platform:** Android
-- **Programming Language:** Java
-- **Database:** Room
-- **UI Framework:** Material Design
-- **Network Communication:** Retrofit
-- **Image Loading:** Glide
+- **AndroidX Components** a
+- **Room Database**
+- **Lifecycle Components**
+- **Size Utility** 
+- **Glide for Image Loading** 
+- **Retrofit for Network Communication** 
 
 ## Getting Started
 
@@ -38,3 +34,5 @@ To get started with the Electric Maintenance App:
 1. Clone the repository.
 2. Open the project in Android Studio.
 3. Build and run the app on a compatible Android device or emulator.
+
+This README provides an overview of the Electric Maintenance App, its features, technologies used, and how to get started with the project. Feel free to customize it further based on your specific project needs!
